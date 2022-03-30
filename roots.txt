@@ -1,0 +1,25 @@
+{
+int a,b,c,e;
+float h,g,d,f;
+printf("Enter the coefficient values");
+scanf("%d %d %d",&a,&b,&c);
+e=((b*b)-(4*a*c));
+if(e==0){
+    h=(-b/(2*a));
+    printf("\n roots are real and equal: %.2f %.2f",h,h);
+}
+else if(e>0)
+{
+    g=((-b)+sqrt(e))/(2*a);
+    d=((-b)-sqrt(e))/(2*a);
+    printf("\nthe roots are real and distinct : %.2f %.2f",g,d);
+}
+else
+{
+
+    g=(-b)/(2*a);
+    d=(sqrt(e*(-1)))/(2*a)
+    printf("\nthe roots are imaginary : %.2f+%.2f i \n%.2f- %.2f i",g,d,g,d);
+}
+
+}

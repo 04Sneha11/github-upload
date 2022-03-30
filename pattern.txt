@@ -1,0 +1,58 @@
+01 02 03 04 05
+10 09 08 07 06 
+11 12 13 14 15 
+20 19 18 17 16
+21 22 23 24 25
+
+
+
+#include<stdio.h>
+int main()
+{
+int num,row,col,val=1,i,j;
+scanf("%d",&num);
+for(row=1;row<=num;row++,printf("\n"))
+{
+  for(col=1;col<=num;col++)
+{
+
+  if(row%2==1)
+  {
+   printf("%02d ",val++);
+  }
+  else
+  {
+     printf("%02d ",val--);
+  }
+}
+if(row%2==1) val=val+4;
+else val=val+6;
+}
+return 0;
+}
+
+
+
+#include<stdio.h>
+int main()
+{
+int num,row,col,val=0,i,j;
+scanf("%d",&num);
+for(row=1;row<=num;row++,printf("\n"))
+{
+  for(col=1;col<=num;col++)
+{
+
+  if(row%2==1)
+  {
+   printf("%02d ",++val);
+  }
+  else
+  {
+     printf("%02d ",val--);
+  }
+}
+val+=5;
+}
+return 0;
+}

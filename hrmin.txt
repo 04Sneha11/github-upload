@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+int min=0,sec,sc,hr=0,mn;
+char n;
+printf("Enter s for secs and m for mins");
+scanf("%c",&n);
+printf("enter the value u want to convert");
+
+if(n=='s'){
+     scanf("%d",&sec);
+      if(sec<60)
+        printf("%d",sec);
+      else{
+        sc=sec%60;
+        sec=sec/60;
+        min+=sec;
+        printf("%dmin %dsec",min,sc);
+     }
+}
+ else if(n=='m'){
+        scanf("%d",&min);
+      if(min<60)
+        printf("%d",min);
+      else{
+         mn=min%60;   
+         min=min/60;
+         hr+=min;
+         printf("%dhr %dmin",hr,mn);
+
+     }
+}
+else
+    printf("enter valid input");
+return(0);
+
+}

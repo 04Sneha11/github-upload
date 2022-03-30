@@ -1,0 +1,133 @@
+diamond 
+--------
+#include<stdio.h>
+int main()
+{
+int row,col,space,num;
+scanf("%d",&num);
+for(row=1;row<=num;row++,printf("\n"))
+{
+    for(space=1;space<=num-row;space++)
+        printf(" ");
+
+    for(col=1;col<=row;col++)
+        printf("* ");
+}
+
+for(row=num-1;row>=1;row--,printf("\n"))
+{
+    for(space=1;space<=num-row;space++)
+        printf(" ");
+
+    for(col=1;col<=row;col++)
+        printf("* ");
+}
+
+return 0;
+}
+  
+
+diamond border
+--------------
+
+int main()
+{
+int row,col,space,num;
+scanf("%d",&num);
+for(row=1;row<=num;row++,printf("\n"))
+{
+    for(space=1;space<=num-row;space++)
+        printf(" ");
+
+    for(col=1;col<=row;col++)
+    {
+        if(col==1 || col==row)
+          printf("* ");
+        else
+            printf("  ");
+    }
+
+}
+
+for(row=num-1;row>=1;row--,printf("\n"))
+{
+    for(space=1;space<=num-row;space++)
+        printf(" ");
+
+    for(col=1;col<=row;col++)
+    {
+        if(col==1 || col==row)
+          printf("* ");
+        else
+            printf("  ");
+    }
+}
+
+return 0;
+}
+
+
+
+
+
+hexagon
+--------
+
+int main()
+{
+int row,col,cnt,num;
+scanf("%d",&num);
+for(row=1,cnt=1;row<(2*num);row++,printf("\n"))
+{
+   for(col=1;col<(2*num);col++)
+   {
+    if((row+col)<=num)
+        printf(" ");
+    else if((row>num) && (col<=cnt))
+        printf(" ");
+    else if(col==num)
+        printf("* ");
+    else
+        printf("* ");
+  }
+  if(row>num)
+    cnt++;
+}
+return 0;
+}
+
+
+
+
+h pattern
+---------
+
+#include<stdio.h>
+int main()
+{
+int row,col,num;
+scanf("%d",&num);
+for(row=1;row<=(num+1)/2;row++,printf("\n"))
+{
+   for(col=1;col<=num;col++)
+    {
+     if(col<=row || col>num-row)
+        printf("*") ;
+     else
+        printf(" ");
+    }
+}
+for(row=(num-1)/2;row>=1;row--,printf("\n"))
+{
+   for(col=1;col<=num;col++)
+    {
+     if((col<=row || col>num-row))
+        printf("*") ;
+
+     else
+        printf(" ");
+    }
+}
+return 0;
+}
+

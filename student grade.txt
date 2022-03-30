@@ -1,0 +1,35 @@
+
+ Write a C program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer.
+ Calculate percentage and grade according to following:
+ Percentage >= 90% : Grade A
+ Percentage >= 80% : Grade B
+ Percentage >= 70% : Grade C
+ Percentage >= 60% : Grade D
+ Percentage >= 40% : Grade E
+ Percentage < 40% : Grade F
+
+
+
+#include<stdio.h>
+int main()
+{
+float phy,chem,bio,maths,csc,sum,prcnt;
+printf("enter the marks of 5 subjects for 100= ");
+scanf("%f %f %f %f %f",&phy,&chem,&bio,&maths,&csc);
+sum=phy+chem+bio+maths+csc;
+prcnt=(sum/500)*100;
+if(prcnt>=90)
+    printf("the percentage is %.2f and grade is A",prcnt);
+else if(prcnt<90 && prcnt>=80)
+    printf("the percentage is %.2f and grade is B",prcnt);
+else if(prcnt<80 && prcnt>=70)
+    printf("the percentage is %.2f and grade is C",prcnt);
+else if(prcnt<70 && prcnt>=60)
+    printf("the percentage is %.2f and grade is D",prcnt);
+else if(prcnt<60 && prcnt>=40)
+    printf("the percentageage is %.2f and grade is E",prcnt);
+else
+    printf("the percent is %.2f and grade is F",prcnt);
+return 0;
+}
+

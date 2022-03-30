@@ -1,0 +1,42 @@
+FACTORIAL
+---------
+
+ #include<stdio.h>
+int main()
+{
+int a,fact=1,itr;
+printf("enter a no.");
+scanf("%d",&a);
+for(itr=a;itr>=1;--itr)
+{
+    fact=fact*itr;
+}
+printf("\n%d",fact);
+return 0;
+}
+
+
+===========================x===============================
+
+STRONG NO. 
+----------
+#include<stdio.h>
+int main()
+{
+int a,fact,itr,b,sum=0;
+printf("enter a no.");
+scanf("%d",&a);
+b=a;
+while(a!=0)
+{
+    fact=1;
+    int dig=a%10;
+    for(itr=dig;itr>=1;itr--)
+       fact=fact*itr;
+    sum=sum+fact;
+    a=a/10;
+}
+(sum==b)?printf("strong no"):printf("not an strong no.");
+return 0;
+}
+

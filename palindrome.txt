@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+int a,b,rev=0;
+printf("enter a no.");
+scanf("%d",&a);
+b=a;
+while(a!=0)
+{
+    int dig=a%10;
+    rev=rev*10+dig;
+    a=a/10;
+
+}
+(rev==b)?printf("palindrome"):printf("not a palindrome");
+return 0;
+}
